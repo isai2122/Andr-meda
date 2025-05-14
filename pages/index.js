@@ -1129,6 +1129,12 @@ const productos=[
     categoria: "Higiene"
   },
 ];
+const [productosMezclados, setProductosMezclados] = useState([]);
+
+useEffect(() => {
+  setProductosMezclados(productos);
+}, []);
+
 // Componente de Login con modificaciones para búsquedas y favoritos
 const Login = ({ onLogin, onSwitchToRegister }) => {
   const [email, setEmail] = useState("");

@@ -1127,7 +1127,7 @@ const [productosMezclados, setProductosMezclados] = useState([
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601267349701",
     imagen: "/images/Images/125.jpg",
     categoria: "Aseo personal"
- },
+ }
 ]); 
 // Componente de Login con modificaciones para búsquedas y favoritos
 const Login = ({ onLogin, onSwitchToRegister }) => {
@@ -1142,8 +1142,6 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
       setError("Por favor ingresa email y contraseña");
       return;
     }
- 
-
     // Simulamos verificación con localStorage
     const users = JSON.parse(localStorage.getItem("users") || "[]");
     const user = users.find(user => user.email === email && user.password === password);

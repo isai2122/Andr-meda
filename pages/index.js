@@ -164,7 +164,7 @@ const [productosMezclados, setProductosMezclados] = useState([
     enlace: "https://www.natura.com.co/p/eau-de-toilette-kaiak-masculino-100ml/NATCOL-111177?position=1&listTitle=manual+showcase+-+lleva+tus+favoritos+ahora+con+40%25+off&consultoria=ortizvallejo",
     imagen: "/images/Images/18.jpg",
     categoria: "Perfumes",
-  },
+   },
    {
   id: 19,
   nombre: "Águas colonia jabuticaba femenino",
@@ -864,8 +864,8 @@ const [productosMezclados, setProductosMezclados] = useState([
     tienda: "Alibaba",
     precio: "76.392 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1600968302199",
-    categoria: "Para el Hogar",
-    imagen: "/images/Images/96.jpg"
+    imagen: "/images/Images/96.jpg",
+    categoria: "Para el Hogar"
   },
   {
     id: 97,
@@ -873,17 +873,17 @@ const [productosMezclados, setProductosMezclados] = useState([
     tienda: "Alibaba",
     precio: "6.474 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601293143576",
-    categoria: "Para el Hogar",
-    imagen: "/images/Images/97.jpg"
+    imagen: "/images/Images/97.jpg",
+    categoria: "Para el Hogar"
   },
   {
     id: 98,
     nombre: "Fregadero de cocina inteligente con pantalla digital",
     tienda: "Alibaba",
     precio: "311.827 COP",
-    enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601370462093",
-    categoria: "Para el Hogar",       
-    imagen: "/images/Images/98.jpg"
+    enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601370462093",     
+    imagen: "/images/Images/98.jpg",
+    categoria: "Para el Hogar" 
   },
   {
     id: 99,
@@ -891,8 +891,8 @@ const [productosMezclados, setProductosMezclados] = useState([
     tienda: "Alibaba",
     precio: "11.221 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601196970766",
-    categoria: "Para el Hogar",
-    imagen: "/images/Images/99.jpg"
+    imagen: "/images/Images/99.jpg",
+    categoria: "Para el Hogar"
   },
   {
     id: 100,
@@ -900,8 +900,8 @@ const [productosMezclados, setProductosMezclados] = useState([
     tienda: "Alibaba",
     precio: "10.790 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601374926267",
-    categoria: "Para el Hogar",
-    imagen: "/images/Images/100.jpg"
+    imagen: "/images/Images/100.jpg",
+    categoria: "Para el Hogar"
   },
   {
     id: 101,
@@ -1126,7 +1126,7 @@ const [productosMezclados, setProductosMezclados] = useState([
     precio: "8.720 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601267349701",
     imagen: "/images/Images/125.jpg",
-    categoria: "Higiene"
+    categoria: "Aseo personal"
  }
 ]); 
 // Componente de Login con modificaciones para búsquedas y favoritos

@@ -1128,7 +1128,7 @@ const [productosMezclados, setProductosMezclados] = useState([
     imagen: "/images/Images/125.jpg",
     categoria: "Aseo personal",
  }
-]); 
+]; 
 // Componente de Login con modificaciones para búsquedas y favoritos
 const Login = ({ onLogin, onSwitchToRegister }) => {
   const [email, setEmail] = useState("");

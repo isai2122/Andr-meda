@@ -298,7 +298,7 @@ const [productosMezclados, setProductosMezclados] = useState([
   precio: "$129.900",
   enlace: "https://www.natura.com.co/p/kit-tododia-nutricion-y-definicion/NATCOL-189632?position=4&listTitle=category+page+list+showcase+-+promociones+kits&consultoria=ortizvallejo",
   imagen: "/images/Images/33.jpg",
-  Categoria:"Aseo personal"
+  categoria:"Aseo personal"
   },
   {
   id: 34,

@@ -1127,7 +1127,7 @@ const [productosMezclados, setProductosMezclados] = useState([
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601267349701",
     imagen: "/images/Images/125.jpg",
     categoria: "Aseo personal"
- }
+ },
 ]); 
 // Componente de Login con modificaciones para búsquedas y favoritos
 const Login = ({ onLogin, onSwitchToRegister }) => {

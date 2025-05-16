@@ -1127,11 +1127,7 @@ const [productosMezclados, setProductosMezclados] = useState([
     categoria: "Higiene"
   },
 ];
-const [productosMezclados, setProductosMezclados] = useState([]);
-
-useEffect(() => {
-  setProductosMezclados(productos);
-}, []);
+const [productosMezclados, setProductosMezclados] = useState([
 
 // Componente de Login con modificaciones para búsquedas y favoritos
 const Login = ({ onLogin, onSwitchToRegister }) => {

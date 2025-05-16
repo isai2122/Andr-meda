@@ -1,7 +1,27 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
 import React, { useState, useEffect } from 'react';
-
+const [productosMezclados, setProductosMezclados] = useState([
+  {
+    id: 1,
+    nombre: "Producto 1",
+    tienda: "Tienda 1",
+    precio: "$10",
+    enlace: "https://example.com",
+    imagen: "/images/producto1.jpg",
+    categoria: "Categoría 1"
+  },
+  {
+    id: 2,
+    nombre: "Producto 2",
+    tienda: "Tienda 2",
+    precio: "$20",
+    enlace: "https://example.com",
+    imagen: "/images/producto2.jpg",
+    categoria: "Categoría 2"
+  },
+  // Agrega más productos aquí
+]);
 {
     id: 1,
     nombre: "Crema nutritiva corporal Tododia cereza y avellana",

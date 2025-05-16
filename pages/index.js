@@ -1,5 +1,7 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
+import { useState } from 'react';
+
 const [productosMezclados, setProductosMezclados] = useState([
 {
     id: 1,

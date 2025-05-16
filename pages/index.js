@@ -1,11 +1,11 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
-import { useState } from 'react';
+import { Sparkles } from "lucide-react";
+import { useState, useEffect } from "react";
 
 
-export default function HomePage() {
-  const [productosMezclados, setProductosMezclados] = useState([
-{
+const productos = [
+  {
     id: 1,
     nombre: "Crema nutritiva corporal Tododia cereza y avellana",
     tienda: "Natura",
@@ -166,7 +166,7 @@ export default function HomePage() {
     enlace: "https://www.natura.com.co/p/eau-de-toilette-kaiak-masculino-100ml/NATCOL-111177?position=1&listTitle=manual+showcase+-+lleva+tus+favoritos+ahora+con+40%25+off&consultoria=ortizvallejo",
     imagen: "/images/Images/18.jpg",
     categoria: "Perfumes",
-   },
+  },
    {
   id: 19,
   nombre: "Águas colonia jabuticaba femenino",
@@ -300,7 +300,7 @@ export default function HomePage() {
   precio: "$129.900",
   enlace: "https://www.natura.com.co/p/kit-tododia-nutricion-y-definicion/NATCOL-189632?position=4&listTitle=category+page+list+showcase+-+promociones+kits&consultoria=ortizvallejo",
   imagen: "/images/Images/33.jpg",
-  categoria:"Aseo personal"
+  Categoria:"Aseo personal"
   },
   {
   id: 34,
@@ -866,8 +866,8 @@ export default function HomePage() {
     tienda: "Alibaba",
     precio: "76.392 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1600968302199",
-    imagen: "/images/Images/96.jpg",
-    categoria: "Para el Hogar"
+    categoria: "Para el Hogar",
+    imagen: "/images/Images/96.jpg"
   },
   {
     id: 97,
@@ -875,17 +875,17 @@ export default function HomePage() {
     tienda: "Alibaba",
     precio: "6.474 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601293143576",
-    imagen: "/images/Images/97.jpg",
-    categoria: "Para el Hogar"
+    categoria: "Para el Hogar",
+    imagen: "/images/Images/97.jpg"
   },
   {
     id: 98,
     nombre: "Fregadero de cocina inteligente con pantalla digital",
     tienda: "Alibaba",
     precio: "311.827 COP",
-    enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601370462093",     
-    imagen: "/images/Images/98.jpg",
-    categoria: "Para el Hogar" 
+    enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601370462093",
+    categoria: "Para el Hogar",       
+    imagen: "/images/Images/98.jpg"
   },
   {
     id: 99,
@@ -893,8 +893,8 @@ export default function HomePage() {
     tienda: "Alibaba",
     precio: "11.221 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601196970766",
-    imagen: "/images/Images/99.jpg",
-    categoria: "Para el Hogar"
+    categoria: "Para el Hogar",
+    imagen: "/images/Images/99.jpg"
   },
   {
     id: 100,
@@ -902,8 +902,8 @@ export default function HomePage() {
     tienda: "Alibaba",
     precio: "10.790 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601374926267",
-    imagen: "/images/Images/100.jpg",
-    categoria: "Para el Hogar"
+    categoria: "Para el Hogar",
+    imagen: "/images/Images/100.jpg"
   },
   {
     id: 101,
@@ -1128,9 +1128,10 @@ export default function HomePage() {
     precio: "8.720 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601267349701",
     imagen: "/images/Images/125.jpg",
-    categoria: "Aseo personal"
- }
-]);
+    categoria: "Higiene"
+  },
+];  
+
 // Componente de Login con modificaciones para búsquedas y favoritos
 const Login = ({ onLogin, onSwitchToRegister }) => {
   const [email, setEmail] = useState("");
@@ -1144,6 +1145,7 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
       setError("Por favor ingresa email y contraseña");
       return;
     }
+
     // Simulamos verificación con localStorage
     const users = JSON.parse(localStorage.getItem("users") || "[]");
     const user = users.find(user => user.email === email && user.password === password);
@@ -1445,21 +1447,12 @@ export default function Home() {
     }
   }, []);
 
+  // Cargar productos y mezclarlos aleatoriamente
+  useEffect(() => {
+    const productosAleatorios = [...productos].sort(() => Math.random() - 0.5);
+    setProductosMezclados(productosAleatorios);
+  }, []);
 
-  {Array.isArray(productosMezclados) ? (
-  productosMezclados.map((producto) => (
-    <div key={producto.id} className="border p-2 m-2 bg-white rounded">
-      <h3 className="text-lg font-bold">{producto.nombre}</h3>
-      <p>Precio: ${producto.precio}</p>
-      <a href={producto.enlace} target="_blank" rel="noopener noreferrer">
-        Ver producto
-      </a>
-    </div>
-  ))
-) : (
-
-  <p>No hay productos</p>
-)}
   // Función para actualizar la búsqueda y guardarla en el historial del usuario
   const handleBusqueda = (valor) => {
     setBusqueda(valor);

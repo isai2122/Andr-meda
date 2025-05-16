@@ -1127,8 +1127,6 @@ const [productosMezclados, setProductosMezclados] = useState([
     categoria: "Higiene"
   },
 ];
-const [productosMezclados, setProductosMezclados] = useState([
-
 // Componente de Login con modificaciones para búsquedas y favoritos
 const Login = ({ onLogin, onSwitchToRegister }) => {
   const [email, setEmail] = useState("");
@@ -1142,6 +1140,7 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
       setError("Por favor ingresa email y contraseña");
       return;
     }
+ 
 
     // Simulamos verificación con localStorage
     const users = JSON.parse(localStorage.getItem("users") || "[]");

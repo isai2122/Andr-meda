@@ -2,7 +2,9 @@ import { HeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
 import { useState } from 'react';
 
-const [productosMezclados, setProductosMezclados] = useState([
+
+export default function HomePage() {
+  const [productosMezclados, setProductosMezclados] = useState([
 {
     id: 1,
     nombre: "Crema nutritiva corporal Tododia cereza y avellana",

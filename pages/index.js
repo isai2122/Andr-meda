@@ -1130,15 +1130,16 @@ const productos = [
     imagen: "/images/Images/125.jpg",
     categoria: "Aseo personal"
   },
-{
-  id: 126,
-  nombre: "Reloj de buceo San Martin 38mm NH35 automático",
-  tienda: "AliExpress",
-  precio: "186.000 COP",
-  enlace: "https://s.click.aliexpress.com/e/_olMlqDl",
-  imagen: "/images/Images/Sb7a019cdaf4e400cb1a0f70e14852b68N.jpg_960x960q75.jpg_.avif",
-  categoria: "A la moda"
-},
+  {
+   id: 126,
+   nombre: "Reloj de buceo San Martin 38mm NH35   automático",
+   tienda: "AliExpress",
+   precio: "186.000 COP",
+   enlace:   "https://s.click.aliexpress.com/e/_olMlqDl",
+  imagen: "/images/Images/.  Sb7a019cdaf4e400cb1a0f70e14852b68N.jpg_960x960q               75.jpg_.avif",
+   categoria: "A la moda"
+  },
+
 
 ];  
 

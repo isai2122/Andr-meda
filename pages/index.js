@@ -1645,10 +1645,11 @@ export default function Home() {
               onClick={() => setMostrarMenu(!mostrarMenu)}
               className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
             >
-            Comprar en
-</button>
-{mostrarMenu && (
-  <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-md z-10">
+  {mostrarMenu && (
+  <div
+    className="absolute left-0 mt-2 min-w-[11rem] w-max bg-white text-black rounded shadow-md z-10"
+    style={{ maxWidth: '90vw' }} // Esto previene que se desborde en móviles
+  >
     <button
       className="block w-full text-left px-4 py-2 hover:bg-gray-100"
       onClick={() => {
@@ -1694,8 +1695,6 @@ export default function Home() {
     )}
   </div>
 )}
-</div>
-
           {/* Botón Quitar filtro */}
           {(filtroTienda || mostrarFavoritos) && (
             <button

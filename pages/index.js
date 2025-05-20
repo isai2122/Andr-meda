@@ -1645,46 +1645,56 @@ export default function Home() {
               onClick={() => setMostrarMenu(!mostrarMenu)}
               className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
             >
-           Comprar en
-            </button>
-            {mostrarMenu && (
-              <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-md z-10">
-                <button
-                  className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                  onClick={() => {
-                    setFiltroTienda("Natura");
-                    setMostrarFavoritos(false);
-                    setMostrarMenu(false);
-                  }}
-                >
-                  Natura
-                </button>
-                <button
-                  className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                  onClick={() => {
-                    setFiltroTienda("Alibaba");
-                    setMostrarFavoritos(false);
-                    setMostrarMenu(false);
-                  }}
-                >
-                  Alibaba
-                </button>
-                {/* Opción de Favoritos */}
-                {user && (
-                  <button
-                    className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
-                    onClick={() => {
-                      setMostrarFavoritos(!mostrarFavoritos);
-                      setFiltroTienda("");
-                      setMostrarMenu(false);
-                    }}
-                  >
-                    {mostrarFavoritos ? "Todos los productos" : "Favoritos ❤"}
-                  </button>
-                )}
-              </div>
-            )}
-          </div>
+            Comprar en
+</button>
+{mostrarMenu && (
+  <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-md z-10">
+    <button
+      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+      onClick={() => {
+        setFiltroTienda("Natura");
+        setMostrarFavoritos(false);
+        setMostrarMenu(false);
+      }}
+    >
+      Natura
+    </button>
+    <button
+      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+      onClick={() => {
+        setFiltroTienda("Alibaba");
+        setMostrarFavoritos(false);
+        setMostrarMenu(false);
+      }}
+    >
+      Alibaba
+    </button>
+    <button
+      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+      onClick={() => {
+        setFiltroTienda("AliExpress");
+        setMostrarFavoritos(false);
+        setMostrarMenu(false);
+      }}
+    >
+      AliExpress
+    </button>
+    {/* Opción de Favoritos */}
+    {user && (
+      <button
+        className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
+        onClick={() => {
+          setMostrarFavoritos(!mostrarFavoritos);
+          setFiltroTienda("");
+          setMostrarMenu(false);
+        }}
+      >
+        {mostrarFavoritos ? "Todos los productos" : "Favoritos ❤"}
+      </button>
+    )}
+  </div>
+)}
+</div>
 
           {/* Botón Quitar filtro */}
           {(filtroTienda || mostrarFavoritos) && (

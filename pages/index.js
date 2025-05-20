@@ -1647,8 +1647,8 @@ export default function Home() {
             >
   {mostrarMenu && (
   <div
-    className="absolute left-0 mt-2 min-w-[11rem] w-max bg-white text-black rounded shadow-md z-10"
-    style={{ maxWidth: '90vw' }} // Esto previene que se desborde en móviles
+    className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
+    style={{ maxWidth: '98vw', overflow: 'visible' }}
   >
     <button
       className="block w-full text-left px-4 py-2 hover:bg-gray-100"
@@ -1680,7 +1680,6 @@ export default function Home() {
     >
       AliExpress
     </button>
-    {/* Opción de Favoritos */}
     {user && (
       <button
         className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"

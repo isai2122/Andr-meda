@@ -1141,7 +1141,6 @@ const productos = [
 
 
 ];
-];
 
 export default function AdminPage() {
   // Esto inserta los estilos CSS en la página

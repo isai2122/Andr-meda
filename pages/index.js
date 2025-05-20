@@ -1645,7 +1645,7 @@ export default function Home() {
               onClick={() => setMostrarMenu(!mostrarMenu)}
               className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
             >
-              Comprar en
+           Comprar en
             </button>
             {mostrarMenu && (
               <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-md z-10">

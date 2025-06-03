@@ -1,6 +1,6 @@
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
-import { Sparkles } from "lucide-react";
+import { Divide, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
 
@@ -1639,207 +1639,197 @@ export default function Home() {
     setProductosVisibles(12);
   }, [mostrarFavoritos]);
 
-  return (
-    <div
-      className="min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/galaxia.jpg')" }}
-    >
-      {/* Barra de navegación */}
-      <nav className="bg-[#0b1c39] bg-opacity-90 text-white px-4 md:px-6 py-4 flex flex-wrap md:flex-nowrap justify-between items-center relative">
-        <h1 className="text-2xl font-bold mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">Andrómeda</h1>
-        <div className="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-3 w-full md:w-auto">
-          {/* Botón Comprar en */}
-          <div className="relative inline-block mb-2 md:mb-0">
-            <button
-              onClick={() => setMostrarMenu(!mostrarMenu)}
-              className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
-            >
-   {mostrarMenu && 
-
-<div className="relative inline-block mb-2 md:mb-0">
-  <button
-    onClick={() => setMostrarMenu(!mostrarMenu)}
-    className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
+ return (
+  <div
+    className="min-h-screen bg-cover bg-center"
+    style={{ backgroundImage: "url('/images/galaxia.jpg')" }}
   >
-    Comprar en
-  </button>
-  {mostrarMenu && (
- <div className="relative inline-block mb-2 md:mb-0">
-  <button
-    onClick={() => setMostrarMenu(!mostrarMenu)}
-    className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
-  >
-    Comprar en
-  </button>
-  {mostrarMenu && (
-    <div
-      className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
-      style={{ maxWidth: '98vw', overflow: 'visible' }}
-    >
-      <button
-        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-        onClick={() => {
-          setFiltroTienda("Natura");
-          setMostrarFavoritos(false);
-          setMostrarMenu(false);
-        }}
-      >
-        Natura
-      </button>
-      <button
-        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-        onClick={() => {
-          setFiltroTienda("Alibaba");
-          setMostrarFavoritos(false);
-          setMostrarMenu(false);
-        }}
-      >
-        Alibaba
-      </button>
-      <button
-        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-        onClick={() => {
-          setFiltroTienda("AliExpress");
-          setMostrarFavoritos(false);
-          setMostrarMenu(false);
-        }}
-      >
-        AliExpress
-      </button>
-      {/* Botón Temu añadido correctamente */}
-      <button
-        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-        onClick={() => {
-          setFiltroTienda("Temu");
-          setMostrarFavoritos(false);
-          setMostrarMenu(false);
-        }}
-      >
-        Temu
-      </button>
-      {/* Botón Favoritos */}
-      {user && (
-        <button
-          className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
-          onClick={() => {
-            setMostrarFavoritos(!mostrarFavoritos);
-            setFiltroTienda("");
-            setMostrarMenu(false);
-          }}
-        >
-          {mostrarFavoritos ? "Todos los productos" : "Favoritos ❤️"}
-        </button>
-      )}
-    </div>
-  )}
-</div>
-                
-          {/* Botón Quitar filtro */}
-          {(filtroTienda || mostrarFavoritos) && (
-            <button
-              onClick={() => {
-                setFiltroTienda("");
-                setMostrarFavoritos(false);
-              }}
-              className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base mb-2 md:mb-0"
+    {/* Barra de navegación */}
+    <nav className="bg-[#0b1c39] bg-opacity-90 text-white px-4 md:px-6 py-4 flex flex-wrap md:flex-nowrap justify-between items-center relative">
+      <h1 className="text-2xl font-bold mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
+        Andrómeda
+      </h1>
+      <div className="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-3 w-full md:w-auto">
+        {/* Botón Comprar en */}
+        <div className="relative inline-block mb-2 md:mb-0">
+          <button
+            onClick={() => setMostrarMenu(!mostrarMenu)}
+            className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
+          >
+            Comprar en
+          </button>
+          {mostrarMenu && (
+            <div
+              className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
+              style={{ maxWidth: "98vw", overflow: "visible" }}
             >
-              Quitar filtro
-            </button>
-          )}
-
-          {/* Botón Categorías */}
-          <div className="relative inline-block mb-2 md:mb-0">
-            <button
-              onClick={() => setMostrarCategorias(!mostrarCategorias)}
-              className="bg-[#700c2f] hover:bg-[#5b0926] px-3 md:px-4 py-2 rounded text-sm md:text-base"
-            >
-              Categorías
-            </button>
-            {mostrarCategorias && (
-              <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-md z-10">
-                {[
-                  "Perfumes",
-                  "Aseo personal",
-                  "Maquillaje",
-                  "Tecnologia",
-                  "Ropa",
-                  "Para el Hogar",
-                  "Electrodomésticos",
-                  "Deportes y entrenamiento",
-                  "Ala moda",
-                ].map((cat) => (
-                  <button
-                    key={cat}
-                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                    onClick={() => {
-                      setFiltroCategoria(cat);
-                      setMostrarCategorias(false);
-                    }}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Botón Quitar categoría */}
-          {filtroCategoria && (
-            <button
-              onClick={() => setFiltroCategoria("")}
-              className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base mb-2 md:mb-0"
-            >
-              Quitar categoría
-            </button>
-          )}
-
-          {/* Icono de usuario o botón de inicio de sesión */}
-          {user ? (
-            <div className="relative mb-2 md:mb-0">
               <button
-                onClick={() => setShowUserProfile(!showUserProfile)}
-                className="bg-blue-700 hover:bg-blue-800 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
+                className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                onClick={() => {
+                  setFiltroTienda("Natura");
+                  setMostrarFavoritos(false);
+                  setMostrarMenu(false);
+                }}
               >
-                <span className="text-white font-bold">{user.name.charAt(0).toUpperCase()}</span>
+                Natura
               </button>
-              {showUserProfile && (
-                <UserProfile
-                  user={user}
-                  onLogout={handleLogout}
-                  onClose={() => setShowUserProfile(false)}
-                />
+              <button
+                className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                onClick={() => {
+                  setFiltroTienda("Alibaba");
+                  setMostrarFavoritos(false);
+                  setMostrarMenu(false);
+                }}
+              >
+                Alibaba
+              </button>
+              <button
+                className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                onClick={() => {
+                  setFiltroTienda("AliExpress");
+                  setMostrarFavoritos(false);
+                  setMostrarMenu(false);
+                }}
+              >
+                AliExpress
+              </button>
+              <button
+                className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                onClick={() => {
+                  setFiltroTienda("Temu");
+                  setMostrarFavoritos(false);
+                  setMostrarMenu(false);
+                }}
+              >
+                Temu
+              </button>
+              {user && (
+                <button
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
+                  onClick={() => {
+                    setMostrarFavoritos(!mostrarFavoritos);
+                    setFiltroTienda("");
+                    setMostrarMenu(false);
+                  }}
+                >
+                  {mostrarFavoritos
+                    ? "Todos los productos"
+                    : "Favoritos ❤️"}
+                </button>
               )}
             </div>
-          ) : (
-            <button
-              onClick={() => setShowLogin(true)}
-              className="bg-blue-700 hover:bg-blue-800 px-3 md:px-4 py-2 rounded text-sm md:text-base mb-2 md:mb-0"
-            >
-              Iniciar Sesión
-            </button>
           )}
         </div>
-      </nav>
 
-      {/* Buscador */}
-      <div className="max-w-xl mx-auto px-4 py-4 md:py-6">
-        <input
-          type="text"
-          placeholder="Buscar productos..."
-          value={busqueda}
-          onChange={(e) => handleBusqueda(e.target.value)}
-          className="w-full p-3 rounded border border-gray-300 shadow-sm"
-        />
-      </div>
+        {/* Botón Quitar filtro */}
+        {(filtroTienda || mostrarFavoritos) && (
+          <button
+            onClick={() => {
+              setFiltroTienda("");
+              setMostrarFavoritos(false);
+            }}
+            className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base mb-2 md:mb-0"
+          >
+            Quitar filtro
+          </button>
+        )}
 
-      {/* Mostrar título para favoritos */}
-      {mostrarFavoritos && (
-        <div className="text-center mb-4 md:mb-6">
-          <h2 className="text-xl md:text-2xl font-bold text-white bg-black bg-opacity-40 inline-block px-4 md:px-6 py-1 md:py-2 rounded">
-            Tus Productos Favoritos ❤
-          </h2>
+        {/* Botón Categorías */}
+        <div className="relative inline-block mb-2 md:mb-0">
+          <button
+            onClick={() => setMostrarCategorias(!mostrarCategorias)}
+            className="bg-[#700c2f] hover:bg-[#5b0926] px-3 md:px-4 py-2 rounded text-sm md:text-base"
+          >
+            Categorías
+          </button>
+          {mostrarCategorias && (
+            <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-md z-10">
+              {[
+                "Perfumes",
+                "Aseo personal",
+                "Maquillaje",
+                "Tecnologia",
+                "Ropa",
+                "Para el Hogar",
+                "Electrodomésticos",
+                "Deportes y entrenamiento",
+                "Ala moda",
+              ].map((cat) => (
+                <button
+                  key={cat}
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                  onClick={() => {
+                    setFiltroCategoria(cat);
+                    setMostrarCategorias(false);
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+
+        {/* Botón Quitar categoría */}
+        {filtroCategoria && (
+          <button
+            onClick={() => setFiltroCategoria("")}
+            className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base mb-2 md:mb-0"
+          >
+            Quitar categoría
+          </button>
+        )}
+
+        {/* Icono de usuario o botón de inicio de sesión */}
+        {user ? (
+          <div className="relative mb-2 md:mb-0">
+            <button
+              onClick={() => setShowUserProfile(!showUserProfile)}
+              className="bg-blue-700 hover:bg-blue-800 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
+            >
+              <span className="text-white font-bold">
+                {user.name.charAt(0).toUpperCase()}
+              </span>
+            </button>
+            {showUserProfile && (
+              <UserProfile
+                user={user}
+                onLogout={handleLogout}
+                onClose={() => setShowUserProfile(false)}
+              />
+            )}
+          </div>
+        ) : (
+          <button
+            onClick={() => setShowLogin(true)}
+            className="bg-blue-700 hover:bg-blue-800 px-3 md:px-4 py-2 rounded text-sm md:text-base mb-2 md:mb-0"
+          >
+            Iniciar Sesión
+          </button>
+        )}
+      </div>
+    </nav>
+
+    {/* Buscador */}
+    <div className="max-w-xl mx-auto px-4 py-4 md:py-6">
+      <input
+        type="text"
+        placeholder="Buscar productos..."
+        value={busqueda}
+        onChange={(e) => handleBusqueda(e.target.value)}
+        className="w-full p-3 rounded border border-gray-300 shadow-sm"
+      />
+    </div>
+
+    {/* Mostrar título para favoritos */}
+    {mostrarFavoritos && (
+      <div className="text-center mb-4 md:mb-6">
+        <h2 className="text-xl md:text-2xl font-bold text-white bg-black bg-opacity-40 inline-block px-4 md:px-6 py-1 md:py-2 rounded">
+          Tus Productos Favoritos ❤
+        </h2>
+      </div>
+    )}
+
 
       {/* Productos - ajustado para mejor visualización en móvil */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-4 md:p-6">

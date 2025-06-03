@@ -1646,54 +1646,66 @@ export default function Home() {
               className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
             >
    {mostrarMenu && (
-  <div
-    className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
-    style={{ maxWidth: '98vw', overflow: 'visible' }}
+<div
+  className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
+  style={{ maxWidth: '98vw', overflow: 'visible' }}
+>
+  <button
+    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+    onClick={() => {
+      setFiltroTienda("Natura");
+      setMostrarFavoritos(false);
+      setMostrarMenu(false);
+    }}
   >
+    Natura
+  </button>
+  <button
+    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+    onClick={() => {
+      setFiltroTienda("Alibaba");
+      setMostrarFavoritos(false);
+      setMostrarMenu(false);
+    }}
+  >
+    Alibaba
+  </button>
+  <button
+    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+    onClick={() => {
+      setFiltroTienda("AliExpress");
+      setMostrarFavoritos(false);
+      setMostrarMenu(false);
+    }}
+  >
+    AliExpress
+  </button>
+  {/* Aquí agregas el botón de Temu */}
+  <button
+    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+    onClick={() => {
+      setFiltroTienda("Temu");
+      setMostrarFavoritos(false);
+      setMostrarMenu(false);
+    }}
+  >
+    Temu
+  </button>
+  {/* Favoritos va aquí, si el usuario está logueado */}
+  {user && (
     <button
-      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+      className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
       onClick={() => {
-        setFiltroTienda("Natura");
-        setMostrarFavoritos(false);
+        setMostrarFavoritos(!mostrarFavoritos);
+        setFiltroTienda("");
         setMostrarMenu(false);
       }}
     >
-      Natura
+      {mostrarFavoritos ? "Todos los productos" : "Favoritos ❤️"}
     </button>
-    <button
-      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-      onClick={() => {
-        setFiltroTienda("Alibaba");
-        setMostrarFavoritos(false);
-        setMostrarMenu(false);
-      }}
-    >
-      Alibaba
-    </button>
-    <button
-      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-      onClick={() => {
-        setFiltroTienda("AliExpress");
-        setMostrarFavoritos(false);
-        setMostrarMenu(false);
-      }}
-    >
-      AliExpress
-    </button>
-    {/* Opción de Favoritos */}
-    {user && (
-      <button
-        className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
-        onClick={() => {
-          setMostrarFavoritos(!mostrarFavoritos);
-          setFiltroTienda("");
-          setMostrarMenu(false);
-        }}
-      >
-        {mostrarFavoritos ? "Todos los productos" : "Favoritos ❤"}
-      </button>
-    )}
-  </div>
+  )}
+</div>
+ 
 )}
           {/* Botón Quitar filtro */}
           {(filtroTienda || mostrarFavoritos) && (

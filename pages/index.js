@@ -1654,68 +1654,78 @@ export default function Home() {
               onClick={() => setMostrarMenu(!mostrarMenu)}
               className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
             >
-   {mostrarMenu && (
-<div
-  className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
-  style={{ maxWidth: '98vw', overflow: 'visible' }}
->
+   {mostrarMenu && 
+
+<div className="relative inline-block mb-2 md:mb-0">
   <button
-    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-    onClick={() => {
-      setFiltroTienda("Natura");
-      setMostrarFavoritos(false);
-      setMostrarMenu(false);
-    }}
+    onClick={() => setMostrarMenu(!mostrarMenu)}
+    className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
   >
-    Natura
+    Comprar en
   </button>
-  <button
-    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-    onClick={() => {
-      setFiltroTienda("Alibaba");
-      setMostrarFavoritos(false);
-      setMostrarMenu(false);
-    }}
-  >
-    Alibaba
-  </button>
-  <button
-    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-    onClick={() => {
-      setFiltroTienda("AliExpress");
-      setMostrarFavoritos(false);
-      setMostrarMenu(false);
-    }}
-  >
-    AliExpress
-  </button>
-  {/* Aquí agregas el botón de Temu */}
-  <button
-    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-    onClick={() => {
-      setFiltroTienda("Temu");
-      setMostrarFavoritos(false);
-      setMostrarMenu(false);
-    }}
-  >
-    Temu
-  </button>
-  {/* Favoritos va aquí, si el usuario está logueado */}
-  {user && (
-    <button
-      className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
-      onClick={() => {
-        setMostrarFavoritos(!mostrarFavoritos);
-        setFiltroTienda("");
-        setMostrarMenu(false);
-      }}
+  {mostrarMenu && (
+    <div
+      className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
+      style={{ maxWidth: '98vw', overflow: 'visible' }}
     >
-      {mostrarFavoritos ? "Todos los productos" : "Favoritos ❤️"}
-    </button>
+      <button
+        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+        onClick={() => {
+          setFiltroTienda("Natura");
+          setMostrarFavoritos(false);
+          setMostrarMenu(false);
+        }}
+      >
+        Natura
+      </button>
+      <button
+        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+        onClick={() => {
+          setFiltroTienda("Alibaba");
+          setMostrarFavoritos(false);
+          setMostrarMenu(false);
+        }}
+      >
+        Alibaba
+      </button>
+      <button
+        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+        onClick={() => {
+          setFiltroTienda("AliExpress");
+          setMostrarFavoritos(false);
+          setMostrarMenu(false);
+        }}
+      >
+        AliExpress
+      </button>
+      {/* Botón Temu añadido correctamente */}
+      <button
+        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+        onClick={() => {
+          setFiltroTienda("Temu");
+          setMostrarFavoritos(false);
+          setMostrarMenu(false);
+        }}
+      >
+        Temu
+      </button>
+      {/* Botón Favoritos */}
+      {user && (
+        <button
+          className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600 font-medium"
+          onClick={() => {
+            setMostrarFavoritos(!mostrarFavoritos);
+            setFiltroTienda("");
+            setMostrarMenu(false);
+          }}
+        >
+          {mostrarFavoritos ? "Todos los productos" : "Favoritos ❤️"}
+        </button>
+      )}
+    </div>
   )}
 </div>
- 
-)}
+                
           {/* Botón Quitar filtro */}
           {(filtroTienda || mostrarFavoritos) && (
             <button

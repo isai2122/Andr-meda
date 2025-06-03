@@ -1664,6 +1664,14 @@ export default function Home() {
     Comprar en
   </button>
   {mostrarMenu && (
+ <div className="relative inline-block mb-2 md:mb-0">
+  <button
+    onClick={() => setMostrarMenu(!mostrarMenu)}
+    className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
+  >
+    Comprar en
+  </button>
+  {mostrarMenu && (
     <div
       className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 min-w-[13rem] w-max bg-white text-black rounded shadow-md z-50"
       style={{ maxWidth: '98vw', overflow: 'visible' }}

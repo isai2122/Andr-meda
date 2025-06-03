@@ -1139,6 +1139,15 @@ const productos = [
   imagen:"/images/Images/IMG-20250519-WA0044.jpg",
    categoria: "A la moda"
   },
+  {
+  id: 128,
+  nombre: "Reloj inteligente",
+  tienda: "Temu",
+  precio: "29.335 COP",
+  enlace: "https://temu.to/k/g6xvt2l1o0y",
+  imagen: "/images/Images/128.jpg",
+  categoria: "Tecnología"
+  }
 
 
 ];  

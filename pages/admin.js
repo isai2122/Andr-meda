@@ -1143,7 +1143,7 @@ const productos = [
   tienda: "Temu",
   precio: "29.335 COP",
   enlace: "https://temu.to/k/g6xvt2l1o0y",
-  imagen: "/images/Images/128.jpg",
+  imagen: "/images/Images/efd4cf42-6378-4489-bdbd-923204d6c4f8.webp",
   categoria: "Tecnología"
    }
 

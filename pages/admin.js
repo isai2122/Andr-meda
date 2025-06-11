@@ -1145,7 +1145,16 @@ const productos = [
   enlace: "https://temu.to/k/g6xvt2l1o0y",
   imagen: "/images/Images/efd4cf42-6378-4489-bdbd-923204d6c4f8.webp",
   categoria: "Tecnología"
-   }
+   },
+  {
+  id: 129,
+  nombre: "Funda transparente para Macbook Air 13 A1932 A2179 A2337 M1 M2",
+  tienda: "AliExpress",
+  precio: "29.117 COP",
+  enlace: "https://s.click.aliexpress.com/e/_Ew18OU2",
+  imagen: "/images/Images/129.jpg",
+  categoria: "Tecnología"
+  }
 
 
 

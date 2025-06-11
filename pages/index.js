@@ -1155,7 +1155,7 @@ const productos = [
   tienda: "AliExpress",
   precio: "29.117 COP",
   enlace: "https://s.click.aliexpress.com/e/_Ew18OU2",
-  imagen: "/images/Images/129.jpg",
+  imagen: "/images/Images/S66d47c15686f400693baeefb34a30ab3k.jpg",
   categoria: "Tecnología"
 }
 

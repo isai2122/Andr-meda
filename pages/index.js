@@ -408,7 +408,7 @@ const productos = [
     precio: "24.953 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601407316627",
     imagen: "/images/Images/45.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 46,
@@ -444,7 +444,7 @@ const productos = [
     precio: "2,983,500 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601272546128",
     imagen: "/images/Images/49.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 50,
@@ -453,7 +453,7 @@ const productos = [
     precio: "$54.561 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601123876985",
     imagen: "/images/Images/50.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 51,
@@ -480,7 +480,7 @@ const productos = [
     precio: "8.346 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601417451831",
     imagen: "/images/Images/53.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 54,
@@ -516,7 +516,7 @@ const productos = [
     precio: "8.631 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=11000021885746",
     imagen: "/images/Images/57.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 58,
@@ -534,7 +534,7 @@ const productos = [
     precio: "177.644 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601435588301",
     imagen: "/images/Images/59.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 60,
@@ -543,7 +543,7 @@ const productos = [
     precio: "153.820 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601383924166",
     imagen: "/images/Images/60.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 61,
@@ -561,7 +561,7 @@ const productos = [
     precio: "62581 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601239096199",
     imagen: "/images/Images/62.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 63,
@@ -588,7 +588,7 @@ const productos = [
     precio: "6.431 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601281981547",
     imagen: "/images/Images/65.jpg",
-    categoria: "Tecnologia"
+    categoria: "Tecnología"
   },
   {
     id: 66,
@@ -1193,7 +1193,7 @@ const productos = [
   precio: "109.596 COP",
   enlace: "https://s.click.aliexpress.com/e/_oE6lr9y",
   imagen: "/images/Images/S11988b29314a469a8fe376f4911f0876Z.jpg",
-  categoria: "Tecnologia"
+  categoria: "Tecnología"
 }
 
 
@@ -1795,7 +1795,7 @@ export default function Home() {
                 "Perfumes",
                 "Aseo personal",
                 "Maquillaje",
-                "Tecnologia",
+                "Tecnología",
                 "Ropa",
                 "Para el Hogar",
                 "Electrodomésticos",

@@ -864,7 +864,7 @@ const productos = [
     precio: "76.392 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1600968302199",
     categoria: "Para el Hogar",
-    imagen: "/images/Images/H141b1cf718a14c7ca49813a1ccbca445o",
+    imagen: "/images/Images/H141b1cf718a14c7ca49813a1ccbca445o.jpg_720x720q50 (2).jpg",
   },
   {
     id: 97,

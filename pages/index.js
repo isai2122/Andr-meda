@@ -1166,8 +1166,35 @@ const productos = [
   enlace: "https://s.click.aliexpress.com/e/_oFtHyeE",
   imagen: "/images/Images/Sc87d06bcf48c45c2936a9cf8ce84c438y.jpg_960x960q75.jpg_.avif",
   categoria: "Tecnología"
-}
+},
+{
+  id: 131,
+  nombre: "Cordones planos blancos originales AF1 con decoración para Air Force One",
+  tienda: "AliExpress",
+  precio: "4.251 COP",
+  enlace: "https://s.click.aliexpress.com/e/_oovfTsi",
+  imagen: "/images/Images/S872f63d6fb6c4218aa7e61d9f95e1b0cJ.jpg",
+  categoria: "Ala moda"
+},
 
+{
+  id: 132,
+  nombre: "Pantalla de proyección plegable 16:9 para exteriores (60–150 pulgadas)",
+  tienda: "AliExpress",
+  precio: "25.886 COP",
+  enlace: "https://s.click.aliexpress.com/e/_oEu5uEi",
+  imagen: "/images/Images/S5c11fd300ec84776b54bc02ace850fa7P.jpg",
+  categoria: "Para el Hogar"
+},
+{
+  id: 133,
+  nombre: "Funda con teclado Bluetooth desmontable para Xiaomi Mi Pad 5/5 Pro 11″",
+  tienda: "AliExpress",
+  precio: "109.596 COP",
+  enlace: "https://s.click.aliexpress.com/e/_oE6lr9y",
+  imagen: "/images/Images/S11988b29314a469a8fe376f4911f0876Z.jpg",
+  categoria: "Tecnologia"
+}
 
 
 ];  

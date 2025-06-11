@@ -1101,7 +1101,7 @@ const productos = [
     precio: "2.200 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601350136679",
     imagen: "/images/Images/122.jpg",
-    categoria: "Hogar"
+    categoria: "Para el Hogar"
   },
   {
     id: 123,
@@ -1110,7 +1110,7 @@ const productos = [
     precio: "4.400 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601283551037",
     imagen: "/images/Images/123.jpg",
-    categoria: "Hogar"
+    categoria: "Para el Hogar"
   },
   {
     id: 124,
@@ -1119,7 +1119,7 @@ const productos = [
     precio: "4.400 COP",
     enlace: "https://offer.alibaba.com/cps/70tc2r7a?bm=cps&src=saf&productId=1601154250185",
     imagen: "/images/Images/124.jpg",
-    categoria: "Hogar"
+    categoria: "Para el Hogar"
   },
   {
     id: 125,

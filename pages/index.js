@@ -1157,7 +1157,17 @@ const productos = [
   enlace: "https://s.click.aliexpress.com/e/_Ew18OU2",
   imagen: "/images/Images/S66d47c15686f400693baeefb34a30ab3k.jpg",
   categoria: "Tecnología"
+},
+  {
+  id: 130,
+  nombre: "Auriculares inalámbricos TWS Pro6 con Bluetooth 5.0 y control táctil",
+  tienda: "AliExpress",
+  precio: "4.251 COP",
+  enlace: "https://s.click.aliexpress.com/e/_oFtHyeE",
+  imagen: "/images/Images/Sc87d06bcf48c45c2936a9cf8ce84c438y.jpg_960x960q75.jpg_.avif",
+  categoria: "Tecnología"
 }
+
 
 
 ];  

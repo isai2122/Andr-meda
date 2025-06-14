@@ -1470,10 +1470,10 @@ const ProductoCard = ({ producto, esFavorito, toggleFavorito }) => {
         alt={producto.nombre}
         className="w-36 h-36 object-contain mb-4"
       />
-      <h2 className="text-md font-extrabold text-center text-blue-900 mb-2 leading-tight min-h-14">
-        {producto.nombre}
+    <h2 className="text-md font-extrabold text-center text-blue-900 mb-2 leading-tight min-h-14 pt-6">
+     {producto.nombre}
       </h2>
-      <p className="text-lg font-semibold text-gray-900 mb-4">
+       <p className="text-lg font-semibold text-gray-900 mb-4">
         {producto.precio}
       </p>
       <a

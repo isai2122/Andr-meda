@@ -1691,17 +1691,34 @@ export default function Home() {
     className="min-h-screen bg-cover bg-center"
     style={{ backgroundImage: "url('/images/galaxia.jpg')" }}
   >
-    {/* Barra de navegación */}
-    <nav className="bg-[#0b1c39] bg-opacity-90 text-white px-4 md:px-6 py-4 flex flex-wrap md:flex-nowrap justify-between items-center relative">
-      <h1 className="text-2xl font-bold mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
+{/* Barra de navegación */}
+<nav className="bg-[#0b1c39] bg-opacity-90 text-white px-4 md:px-6 py-4 flex flex-wrap md:flex-nowrap justify-between items-center relative">
+  <div className="text-2xl font-bold mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
+    <div className="flex items-center mb-2 md:mb-0 w-full md:w-auto">
+      <img
+        src="/images/Logo.png"
+        alt="Logo"
+        className="rounded-full"
+        style={{
+          height: "34px",
+          width: "34px",
+          marginRight: "10px",
+          objectFit: "cover",
+          background: "#fff"
+        }}
+      />
+      <span className="text-2xl font-bold text-center md:text-left" style={{ lineHeight: "1" }}>
         Andrómeda
-      </h1>
-      <div className="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-3 w-full md:w-auto">
-        {/* Botón Comprar en */}
-        <div className="relative inline-block mb-2 md:mb-0">
-          <button
-            onClick={() => setMostrarMenu(!mostrarMenu)}
-            className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
+      </span>
+    </div>
+  </div>
+
+  <div className="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-3 w-full md:w-auto">
+    {/* Botón Comprar en */}
+    <div className="relative inline-block mb-2 md:mb-0">
+      <button
+        onClick={() => setMostrarMenu(!mostrarMenu)}
+        className="bg-blue-800 hover:bg-blue-900 px-3 md:px-4 py-2 rounded text-sm md:text-base"
           >
             Comprar en
           </button>
